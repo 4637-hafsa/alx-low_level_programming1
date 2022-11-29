@@ -1,12 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
-/*
-* File: lists.h
-* Auth: Brennan D Baraban
-* Desc: Header file containing prototypes and definitions for all functions
-*       and types written in the 0x11-singly_linked_lists directory.
-*/
-#include <stdlib.h>
+#ifndef _LINKED_LIST
+#define _LINKED_LIST
 /**
 * struct list_s - singly linked list
 * @str: string - (malloc'ed string)
@@ -14,14 +7,15 @@
 * @next: points to the next node
 *
 * Description: singly linked list node structure
-*              for Holberton project
+* for Holberton project
 */
 typedef struct list_s
 {
 char *str;
-unsigned int len;  
+unsigned int len;
 struct list_s *next;
 } list_t;
+int _strlen(const char *s);
 size_t print_list(const list_t *h);
 size_t list_len(const list_t *h);
 list_t *add_node(list_t **head, const char *str);
